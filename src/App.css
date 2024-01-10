@@ -1,0 +1,24 @@
+.hover-zoom:hover {
+  transform: scale(1.2);
+  transition: transform 0.1s ease-in-out;
+  cursor: pointer;
+}
+/*hover sui film come avevo fatto sul primo netflix e sl menu'*/
+
+.dark-background {
+  background-color: #141414;
+}
+/*colore di netflix, volevo integrare sass e cambiare la variabile come fatto nel primo progetto, ma per risparmiare tempo ho preferito questa soluzione*/
+
+.link-hover:hover {
+  color: white !important; /*dovuto usarlo per forza per i link del footer*/
+}
+
+/* per pagina settings */
+.no-border-listgroup .list-group-item {
+  border: none;
+}
+
+.no-underline-link a {
+  text-decoration: none;
+}
