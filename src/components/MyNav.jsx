@@ -3,6 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Search, Bell, CaretDown } from "react-bootstrap-icons";
 import netflixLogo from "../assets/netflix_logo.png";
 import avatar from "../assets/avatar.png";
+import { NavLink } from "react-router-dom";
 
 const MyNav = () => {
   return (
@@ -13,12 +14,12 @@ const MyNav = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="#" className="text-white hover-zoom">
+          <NavLink href="#" className="text-white hover-zoom nav-link" to="/">
             Home
-          </Nav.Link>
-          <Nav.Link href="#" className="text-white hover-zoom">
+          </NavLink>
+          <NavLink href="#" className="text-white hover-zoom nav-link" to="/tvshows">
             TV Shows
-          </Nav.Link>
+          </NavLink>
           <Nav.Link href="#" className="text-white hover-zoom">
             Movies
           </Nav.Link>

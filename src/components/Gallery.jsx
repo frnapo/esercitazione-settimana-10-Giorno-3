@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Alert, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class Gallery extends Component {
   state = {
@@ -22,6 +23,7 @@ class Gallery extends Component {
       }
 
       const data = await response.json();
+      console.log(data);
 
       // utilizzato metodo slice per passare solo i primi 6 film
       const firstSixMovies = data.Search.slice(0, 6);
@@ -58,12 +60,14 @@ class Gallery extends Component {
           ) : (
             movies.map((movie) => (
               <Col key={movie.imdbID} xs={6} md={4} lg="2" className="hover-zoom">
-                <img
-                  src={movie.Poster}
-                  alt={movie.Title}
-                  className="img-fluid"
-                  style={{ width: "400px", height: "100px", objectFit: "cover" }}
-                />
+                <Link to={`/MovieDetails/${movie.imdbID}`}>
+                  <img
+                    src={movie.Poster}
+                    alt={movie.Title}
+                    className="img-fluid"
+                    style={{ width: "400px", height: "100px", objectFit: "cover" }}
+                  />
+                </Link>
                 {/*<h6>{movie.Title}</h6>*/}
                 {/* Ho passato anche il titolo giusto per far vedere qualcosa in più ma è molto più bello e minimal senza, perciò lo commenterò */}
               </Col>
