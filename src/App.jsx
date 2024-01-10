@@ -32,7 +32,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MyHome />} />
             <Route path="/tvshows" element={<TVShows />} />
-            <Route path="/MovieDetails/:filmID" element={<MovieDetails />} />
+            <Route path="/MovieDetails/:movieId" element={<MovieDetails />} />
           </Routes>
           <MyFooter />
           {/* da qui profile page*/}
