@@ -22,6 +22,7 @@ const MovieDetails = () => {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const movieDetails = await response.json();
+        console.log(movieDetails);
         setMovieData(movieDetails);
         fetchDetails(movieId, setComments, setError);
       } catch (error) {
@@ -68,8 +69,8 @@ const MovieDetails = () => {
               />
               <Card.Body>
                 <p>
-                  {movieData.year}
-                  <span className="ms-3">{movieData.runtime}</span>
+                  {movieData.Released}
+                  <span className="ms-3">{movieData.Runtime}</span>
                 </p>
                 <Card.Title>{movieData.Title}</Card.Title>
                 <Card.Text>{movieData.Plot}</Card.Text>

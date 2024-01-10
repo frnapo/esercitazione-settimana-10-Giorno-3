@@ -60,7 +60,7 @@ class Gallery extends Component {
           ) : (
             movies.map((movie) => (
               <Col key={movie.imdbID} xs={6} md={4} lg="2" className="hover-zoom">
-                <Link to={`/MovieDetails/${movie.imdbID}`}>
+                <Link to={`/moviedetails/${movie.imdbID}`}>
                   <img
                     src={movie.Poster}
                     alt={movie.Title}

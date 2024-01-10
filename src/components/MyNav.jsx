@@ -40,10 +40,12 @@ const MyNav = () => {
           <Nav.Link href="#" className="hover-zoom">
             <Bell color="white" />
           </Nav.Link>
-          <Nav.Link href="#" className="hover-zoom">
+          <NavLink href="#" className="hover-zoom nav-link" to="/profile">
             <img src={avatar} alt="avatar" style={{ maxWidth: "28px" }} />
-            <CaretDown color="white" className="ms-2" />
-          </Nav.Link>
+          </NavLink>
+          <NavLink href="#" className="hover-zoom nav-link ps-0" to="/settings">
+            <CaretDown color="white" />
+          </NavLink>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
